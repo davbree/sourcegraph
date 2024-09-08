@@ -1,4 +1,7 @@
 const path = require('path')
+
+import { execSync } from 'child_process'
+
 import { defineStackbitConfig, SiteMapEntry } from '@stackbit/types'
 import { DocumentContext, GitContentSource } from '@stackbit/cms-git'
 
@@ -19,6 +22,11 @@ const config = defineStackbitConfig({
             models: [BlogPost, Changelog, Podcast, Terms],
         }),
     ],
+    onDocumentCreate: async (options) => {
+        const document = await options.createDocument(options.createDocumentOptions);
+        execSync('npm run build:cache');
+        return document;
+    },
     sitemap: options => {
         const result: SiteMapEntry[] = []
         const fileRegex = /\d+\/|\.(md|markdown|mdx)$/gi
