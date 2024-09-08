@@ -17,20 +17,21 @@ export function PostDetailsInfoContainer({ children }: { children: React.ReactNo
 export function PostDetailsInfo({ version, avatar, username, keywords, date }: PostInfoProps): any {
   return (
     <div className="flex flex-col 2xl:flex-row items-start 2xl:items-center space-y-4 2xl:space-y-0 2xl:space-x-6 my-4 mb-8 text-gray-700 text-sm font-sans">
-      <span className="flex items-center space-x-2 text-gray-700 text-sm font-sans">
+      <span className="flex items-center space-x-2 text-gray-700 text-sm font-sans" data-sb-field-path=".authors.0">
         <img
           src={avatar}
           alt={username}
           className="w-[28px] h-[28px] rounded-full"
+          data-sb-field-path=".avatar"
         />
-        <span className="text-gray-700 font-sans text-sm font-normal leading-[150%] tracking-[0px]">
+        <span className="text-gray-700 font-sans text-sm font-normal leading-[150%] tracking-[0px]" data-sb-field-path=".name">
           {username}
         </span>
       </span>
 
       <span className="flex items-center text-gray-500 space-x-1">
         <Calendar className="w-4 h-4 text-gray-300" />
-        <span>{date}</span>
+        <span data-sb-field-path=".publishDate">{date}</span>
       </span>
 
       <span className="flex flex-wrap md:flex-nowrap items-center text-gray-500 space-x-2">
@@ -40,11 +41,12 @@ export function PostDetailsInfo({ version, avatar, username, keywords, date }: P
             <span
               key={index}
               className="text-gray-700 font-sans text-sm font-normal leading-[150%] tracking-[0px]"
+              data-sb-field-path={".tags." + index}
             >
               {keyword},
             </span>
           ))}
-          <span className="text-gray-700 font-sans text-sm font-normal leading-[150%] tracking-[0px]">
+          <span className="text-gray-700 font-sans text-sm font-normal leading-[150%] tracking-[0px]" data-sb-field-path=".version.0">
             {version}
           </span>
         </span>

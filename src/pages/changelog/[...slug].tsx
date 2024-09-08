@@ -24,6 +24,7 @@ interface PageProps {
     content: MDXRemoteSerializeResult
     keywords: string[],
     post: any
+    pageId?: string
 }
 
 const CONTENT_PARENT_DIRECTORY = './content/'
@@ -33,7 +34,7 @@ const getMainUrl = (fullUrl: string): string => {
     return `${url.origin}${url.pathname.split('/').slice(0, 3).join('/')}`
 }
 
-const TermPage: NextPage<PageProps> = ({ post, content }) => {
+const TermPage: NextPage<PageProps> = ({ post, content, pageId }) => {
     const [xPostUrl, setXPostUrl] = useState('')
 
     const title = post.frontmatter.title
@@ -55,13 +56,13 @@ const TermPage: NextPage<PageProps> = ({ post, content }) => {
 
     return (
         <Layout className='bg-gray-50'>
-            <div className="min-h-scree flex items-center justify-center ml-6">
+            <div className="min-h-scree flex items-center justify-center ml-6" data-sb-object-id={pageId}>
                 <div className="container mx-auto flex w-full md:w-[80%] flex-col p-6 md:flex-row">
                     <div className="flex w-full flex-col md:w-3/4">
                         <div className="mb-12 flex flex-col md:flex-row">
                             <aside className="hidden md:block w-1/4 pr-6" />
                             <div className="ml-0 md:ml-4 w-full md:w-[60%]">
-                                <h2>{title}</h2>
+                                <h2 data-sb-field-path="title">{title}</h2>
                                 <PostDetailsInfo
                                     version={version}
                                     avatar={avatar}
@@ -69,7 +70,9 @@ const TermPage: NextPage<PageProps> = ({ post, content }) => {
                                     keywords={tags}
                                     date={formatDate(publishDate)}
                                 />
-                                <MDXRemote {...content} components={components} />
+                                <div data-sb-field-path=".markdown_content">
+                                    <MDXRemote {...content} components={components} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,6 +171,7 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = false }
 
     return {
         props: {
+            pageId: 'content/' + filePath,
             post,
             content,
             preview,
