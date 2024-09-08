@@ -40,6 +40,11 @@ const config = defineStackbitConfig({
                     document,
                     urlPath: `/${newSlug.join('/')}`,
                 })
+            } else if (filePath) {
+                result.push({
+                    document,
+                    urlPath: '/' + path.relative('content', filePath.replace(/\.md$/, '')),
+                })
             }
         }
         return result
