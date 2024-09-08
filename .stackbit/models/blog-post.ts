@@ -4,7 +4,18 @@ import pageFields from './page-fields'
 const BlogPost: Model = {
     type: 'page',
     name: 'BlogPost',
-    filePath: 'content/blogposts/{slug}.md',
+    filePath: async ({ document, data }) => {
+        if (!data.slug) {
+            return 'content/blogposts/{slug}.md'
+        }
+        const filePathParts = document.context.filePath.split('/')
+        const containingDir = filePathParts[filePathParts.length - 2]
+        if (containingDir.match(/\d+/)) {
+            const publishDate = new Date(data.publishDate)
+            return `content/blogposts/${publishDate.getFullYear()}/${data.slug}.md`
+        }
+        return `content/blogposts/${containingDir}/${data.slug}.md`
+    },
     fields: [
         ...pageFields,
         {

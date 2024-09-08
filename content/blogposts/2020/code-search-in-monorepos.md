@@ -5,6 +5,7 @@ authors:
     url: https://twitter.com/sqs
 publishDate: 2020-11-13T10:00-08:00
 tags: [blog]
+slug: code-search-in-monorepos
 published: true
 canonical: https://docs.sourcegraph.com/adopt/code_search_in_monorepos
 ---
