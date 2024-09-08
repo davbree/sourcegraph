@@ -2,20 +2,20 @@ import { Field } from '@stackbit/types'
 
 const pageFields: Field[] = [
     {
-        name: 'title',
-        type: 'string',
-    },
-    {
         name: 'slug',
         type: 'slug',
     },
     {
-        name: 'published',
-        type: 'boolean',
+        name: 'title',
+        type: 'string',
     },
     {
         name: 'description',
         type: 'string',
+    },
+    {
+        name: 'published',
+        type: 'boolean',
     },
     {
         name: 'publishDate',

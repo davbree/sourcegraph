@@ -9,7 +9,7 @@ const Podcast: Model = {
         ...pageFields,
         {
             type: 'string',
-            name: 'videoId',
+            name: 'videoID',
         },
         {
             type: 'string',
