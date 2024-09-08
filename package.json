@@ -18,7 +18,8 @@
     "cypress:headless": "cypress run --browser chrome",
     "test": "pnpm run build && start-server-and-test 'pnpm run start' http://127.0.0.1:3000 'pnpm run cypress'",
     "test:ci": "pnpm run build && start-server-and-test 'pnpm run start' http://127.0.0.1:3000 'pnpm run cypress:headless'",
-    "analyze": "ANALYZE=true pnpm run build"
+    "analyze": "ANALYZE=true pnpm run build",
+    "visual-editor": "stackbit dev"
   },
   "eslintConfig": {
     "extends": [
@@ -102,6 +103,9 @@
     "@next/bundle-analyzer": "^12.3.0",
     "@sourcegraph/eslint-config": "^0.33.0",
     "@sourcegraph/prettierrc": "^3.0.3",
+    "@stackbit/cli": "^0.3.91",
+    "@stackbit/cms-git": "^1.0.6",
+    "@stackbit/types": "^2.0.5",
     "@svgr/webpack": "^6.2.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/d3-format": "^3.0.1",
