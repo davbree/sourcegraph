@@ -18,6 +18,7 @@ slug: 'code-monitors-ga'
 
 published: true
 
+type: Changelog
 ---
 
 Code Monitors are user-defined queries that alert users whenever a new search result or change appears, and they can trigger actions to run automatically via email, Slack notification, or  webhook. Slack notifications were made generally available in [July’s release](https://sourcegraph.com/blog/release/july-2024), and in this month’s release we are now making webhooks generally available.

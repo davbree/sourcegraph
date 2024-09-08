@@ -18,6 +18,7 @@ slug: 'jetbrains-side-panel'
 
 published: true
 
+type: Changelog
 ---
 
 In our quest for consistency across how you use Cody, JetBrains users now get the same side panel experience found in Cody for VS Code and on the web. This update includes improvements such as:

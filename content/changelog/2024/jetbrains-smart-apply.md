@@ -18,6 +18,7 @@ slug: 'jetbrains-smart-apply'
 
 published: true
 
+type: Changelog
 ---
 
 [Announced for VS Code users](https://sourcegraph.com/blog/cody-vscode-1-32-0-release) in the last IDE release (v1.32), Smart Apply is now available for JetBrains and allows users to take suggestions from the Cody chat window and near-instantly turn them into diffs in your code. Every code block presented in a chat window will now have a new “Apply” button shown to the user and when clicked, Cody will automatically analyze your open code file, find where that relevant code should live, and add a diff.

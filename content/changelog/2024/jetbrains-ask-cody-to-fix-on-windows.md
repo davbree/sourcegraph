@@ -15,6 +15,8 @@ relatedTopics:
     url: https://sourcegraph.com/docs/cody
   - title: Download Cody for JetBrains
     url: https://plugins.jetbrains.com/plugin/9682-cody-ai-coding-assistant-with-autocomplete--chat
+
+type: Changelog
 ---
 
 The Ask Cody to Fix button ([released in v6.0.25](https://sourcegraph.com/blog/cody-jetbrains-6-0-25-release)) is now available on Windows. With just a single button, you can go from seeing an error in your IDE to implementing a fix.

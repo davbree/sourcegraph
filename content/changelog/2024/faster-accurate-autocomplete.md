@@ -15,6 +15,8 @@ relatedTopics:
     url: https://sourcegraph.com/docs/cody
   - title: Download Cody for VS Code
     url: https://marketplace.visualstudio.com/items?itemName=sourcegraph.cody-ai
+
+type: Changelog
 ---
 
 Autocomplete has been overhauled with multiple under-the-hood changes, making it both faster and more accurate:

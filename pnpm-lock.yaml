@@ -164,7 +164,7 @@ devDependencies:
     version: 0.3.91(graphql@16.9.0)
   '@stackbit/cms-git':
     specifier: ^1.0.6
-    version: link:node_modules/@stackbit/cms-git
+    version: 1.0.6(graphql@16.9.0)
   '@stackbit/types':
     specifier: ^2.0.5
     version: 2.0.5

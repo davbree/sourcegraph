@@ -18,6 +18,7 @@ slug: 'cody-web-ga'
 
 published: true
 
+type: Changelog
 ---
 
 The core experience of using Cody is alongside your code in your IDE of choice, but there are often times when you want to interact with Cody via the web. It can be particularly helpful as part of a workflow where you’re performing a search via Code Search and need help from Cody, or if you’re on your mobile device and want to ask it a question. Many users have also been using Cody Web and its access to leading models from Anthropic and OpenAI to ask non-code related questions as well.

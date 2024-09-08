@@ -13,7 +13,7 @@ version: [v5.7.0]
 slug: 'at-mention-directories'
 
 published: true
-
+type: Changelog
 ---
 
 Cody chat lets developers @ mention specific repos or files as context in a prompt to improve the quality of the answer it provides. This works well for codebases made up of multiple repos or if you know the exact file you wish to work with, but we’ve heard feedback from users that quality of results suffered when working with larger, more complex repos like monorepos and you’re not sure of or need to reference more than one file.

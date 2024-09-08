@@ -1,23 +1,25 @@
 ---
-title: "New default models for enterprise: DeepSeek v2 and Claude 3.5 Sonnet"
-
+title: 'New default models for enterprise: DeepSeek v2 and Claude 3.5 Sonnet'
 authors:
   - name: Kelvin Yap
-    url: https://x.com/kelvinyap
-    avatar: https://storage.googleapis.com/sourcegraph-assets/blog/kelvin_avatar.png
-
-publishDate: 2024-09-04T22:45-02:00
-
-description: "Cody is built on model interoperability and we aim to provide access to the best and latest models, and today we’re making an update to the default models offered to Enterprise customers: DeepSeek-V2 is the recommended default for autocomplete, while Claude 3.5 Sonnet is now the recommended default for chat and prompts."
-
-tags: [Enterprise, VS Code, JetBrains]
-
-version: [v5.7.0]
-
-slug: 'default-enterprise-models'
-
+    url: 'https://x.com/kelvinyap'
+    avatar: 'https://storage.googleapis.com/sourcegraph-assets/blog/kelvin_avatar.png'
+publishDate: '2024-09-04T22:45-02:00'
+description: >-
+  Cody is built on model interoperability and we aim to provide access to the
+  best and latest models, and today we’re making an update to the default models
+  offered to Enterprise customers: DeepSeek-V2 is the recommended default for
+  autocomplete, while Claude 3.5 Sonnet is now the recommended default for chat
+  and prompts.
+tags:
+  - Enterprise
+  - VS Code
+  - JetBrains
+version:
+  - v5.7.0
+slug: default-enterprise-models
 published: true
-
+type: Changelog
 ---
 
 Cody is built on model interoperability and we aim to provide access to the best and latest models, and today we’re making an update to the default models offered to Enterprise customers.

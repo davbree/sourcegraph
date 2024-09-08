@@ -19,6 +19,8 @@ slug: 'search-jobs-ga'
 
 published: true
 
+type: Changelog
+
 ---
 
 The most common use case when searching your codebase is to find the best match to your query as quickly as possible. However, for some use cases such as audits and security checks, completeness of results are far more important. Search Jobs allow search queries to be run across your entire codebase (including repos, branches, and revisions) at scale and prioritize completeness over quick response times and results ranking.
