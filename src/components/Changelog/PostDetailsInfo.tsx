@@ -41,7 +41,7 @@ export function PostDetailsInfo({ version, avatar, username, keywords, date }: P
             <span
               key={index}
               className="text-gray-700 font-sans text-sm font-normal leading-[150%] tracking-[0px]"
-              data-sb-field-path={`.tags. + ${index}`}
+              data-sb-field-path={`.tags.${index}`}
             >
               {keyword},
             </span>
