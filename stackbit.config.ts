@@ -17,6 +17,7 @@ const config = defineStackbitConfig({
     nodeVersion: '18',
     preInstallCommand: 'npm install -g pnpm@^8.1.1',
     installCommand: 'pnpm install',
+    devCommand: 'npm run dev',
     contentSources: [
         new GitContentSource({
             rootPath: __dirname,
