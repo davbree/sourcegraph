@@ -15,6 +15,7 @@ const config = defineStackbitConfig({
     stackbitVersion: '0.6.0',
     ssgName: 'nextjs',
     nodeVersion: '18',
+    preInstallCommand: 'npm install -g pnpm@^8.1.1',
     installCommand: 'pnpm install',
     contentSources: [
         new GitContentSource({
