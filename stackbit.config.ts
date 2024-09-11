@@ -4,6 +4,7 @@ import { execSync } from 'child_process'
 
 import { defineStackbitConfig, SiteMapEntry } from '@stackbit/types'
 import { DocumentContext, GitContentSource } from '@stackbit/cms-git'
+import { Actions } from '@stackbit/utils'
 
 import BlogPost from './.stackbit/models/blog-post'
 import Changelog from './.stackbit/models/changelog'
@@ -22,10 +23,21 @@ const config = defineStackbitConfig({
             models: [BlogPost, Changelog, Podcast, Terms],
         }),
     ],
-    onDocumentCreate: async (options) => {
-        const document = await options.createDocument(options.createDocumentOptions);
-        execSync('npm run build:cache');
-        return document;
+    actions: [
+        Actions.GenerateContentFromPreset({
+            label: 'Generate content with AI',
+            modelsConfig: [
+                {
+                    name: 'changelog',
+                    customPrompt: 'You are writing a changelog post. Include all relevant information about the changes. Do not include internal or placeholder text. All html tags should be removed.',
+                },
+            ],
+        }),
+    ],
+    onDocumentCreate: async options => {
+        const document = await options.createDocument(options.createDocumentOptions)
+        execSync('npm run build:cache')
+        return document
     },
     sitemap: options => {
         const result: SiteMapEntry[] = []

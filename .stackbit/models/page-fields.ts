@@ -4,6 +4,7 @@ const pageFields: Field[] = [
     {
         name: 'slug',
         type: 'slug',
+        required: true,
     },
     {
         name: 'title',
