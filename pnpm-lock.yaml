@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@dotlottie/react-player':
     specifier: ^1.6.15
@@ -160,17 +164,17 @@ devDependencies:
     specifier: ^3.0.3
     version: 3.0.3
   '@stackbit/cli':
-    specifier: ^0.3.93
-    version: 0.3.93(graphql@16.9.0)
+    specifier: ^0.3.102
+    version: 0.3.102(graphql@16.9.0)
   '@stackbit/cms-git':
-    specifier: ^1.0.8
-    version: 1.0.8(graphql@16.9.0)
+    specifier: ^1.0.15
+    version: 1.0.15(graphql@16.9.0)
   '@stackbit/types':
-    specifier: ^2.0.7
-    version: 2.0.7
+    specifier: ^2.1.0
+    version: 2.1.0
   '@stackbit/utils':
-    specifier: ^0.4.28
-    version: 0.4.28
+    specifier: ^0.7.2
+    version: 0.7.2
   '@svgr/webpack':
     specifier: ^6.2.1
     version: 6.3.1
@@ -4696,6 +4700,16 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
+  /@notionhq/client@2.2.15:
+    resolution: {integrity: sha512-XhdSY/4B1D34tSco/GION+23GMjaS9S2zszcqYkMHo8RcWInymF6L1x+Gk7EmHdrSxNFva2WM8orhC4BwQCwgw==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@types/node-fetch': 2.6.11
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
+    dev: true
+
   /@octokit/auth-token@2.5.0:
     resolution: {integrity: sha512-r5FVUJCOLl19AxiuZD2VRZ/ORjp/4IN98Of6YJoJOkY75CIBuYfmiNHGrDwXr+aLGG55igl9QrxX3hbiXlLb+g==}
     dependencies:
@@ -5503,12 +5517,12 @@ packages:
     resolution: {integrity: sha512-d4h70dAL5RR6HC8tOKRdBHUx0EEpZiSjmTlLUB4V2lDddt83B9df7yWuk1sgrUX10vrWGlkC3Phv4B6W9Qk/5g==}
     dev: true
 
-  /@stackbit/cli@0.3.93(graphql@16.9.0):
-    resolution: {integrity: sha512-QcxU50qtXaN/BfLyQAvqyqFZsaRalRW3s/4agdG4R1fq/YZteYMZTgZpBhqBF3d3kO6rdRduchVrdDRekkquZw==}
+  /@stackbit/cli@0.3.102(graphql@16.9.0):
+    resolution: {integrity: sha512-mMn4ICVB+bJAXMygNBky5fQg/qp0XBz2nLUMNe2MwX+AB00RdlIrQO7GBQFi+EPoXlio9HJL8Ktmv1oMskbNCg==}
     hasBin: true
     dependencies:
-      '@stackbit/dev': 2.1.4(graphql@16.9.0)
-      '@stackbit/sdk': 2.0.10
+      '@stackbit/dev': 2.2.4(graphql@16.9.0)
+      '@stackbit/sdk': 2.1.3
       analytics-node: 4.0.1
       chalk: 4.1.2
       configstore: 5.0.1
@@ -5544,13 +5558,13 @@ packages:
       - supports-color
     dev: true
 
-  /@stackbit/cms-contentful@1.0.8(graphql@16.9.0):
-    resolution: {integrity: sha512-W1dK4GFV1g/BSInFOjIZgAHcF5+GkoqMtq2dy9jeYraFXUNvVswAarJC4Utiy/vWPo0QLdVIRYxvBQWj5q3i6w==}
+  /@stackbit/cms-contentful@1.0.15(graphql@16.9.0):
+    resolution: {integrity: sha512-NroSK64szekwFXlUJAM53/2GROT0GlrbKQYLtKdUUEYufBMIPSeg8CCdQwHNi9GdFpyT0zyy+Er2JynF0PObCg==}
     dependencies:
       '@contentful/rich-text-types': 15.15.1
-      '@stackbit/cms-core': 3.0.8(graphql@16.9.0)
-      '@stackbit/types': 2.0.7
-      '@stackbit/utils': 0.4.27
+      '@stackbit/cms-core': 3.1.5(graphql@16.9.0)
+      '@stackbit/types': 2.1.0
+      '@stackbit/utils': 0.7.2
       contentful: 9.3.7
       contentful-management: 7.54.2
       lodash: 4.17.21
@@ -5595,16 +5609,16 @@ packages:
       - supports-color
     dev: true
 
-  /@stackbit/cms-core@3.0.8(graphql@16.9.0):
-    resolution: {integrity: sha512-BC146yFRbDHh5bES1IlolFacPYHXyPAMN8kPCMTd7EqQyoqwpstdl91xjYrIQsp8HbPByAxZV4lJ4Pb+N+g/ng==}
+  /@stackbit/cms-core@3.1.5(graphql@16.9.0):
+    resolution: {integrity: sha512-6fVDrqe5PN4h5l2wC3SCOL+mvJuAnG1SOZt+dJPen27cQuPLvYDnMKbj7bypPlKeSKH/6nSpvJlw1ppno4gg7g==}
     dependencies:
       '@babel/parser': 7.22.16
       '@babel/traverse': 7.22.20
       '@iarna/toml': 2.2.5
       '@netlify/sdk': 1.67.0(graphql@16.9.0)
-      '@stackbit/sdk': 2.0.10
-      '@stackbit/types': 2.0.7
-      '@stackbit/utils': 0.4.27
+      '@stackbit/sdk': 2.1.3
+      '@stackbit/types': 2.1.0
+      '@stackbit/utils': 0.7.2
       chalk: 4.1.2
       content-engine: 0.0.29
       esm: 3.2.25
@@ -5650,14 +5664,14 @@ packages:
       - supports-color
     dev: true
 
-  /@stackbit/cms-git@1.0.8(graphql@16.9.0):
-    resolution: {integrity: sha512-KqWCAkRGAF+yp3OXe3AMurbZxnk1DFxky8VzUI4ODku8hYPxDCcE1iojyMR+7qv5cT2E/SjsQiIGsASv6pXHxQ==}
+  /@stackbit/cms-git@1.0.15(graphql@16.9.0):
+    resolution: {integrity: sha512-VVNJqbyCgIee7NS5FRON3TBlFk+UvDKHXyLDCPk7xU0UN6lApiw1Teb4VR5t2OV9NgEGDY9zJc3SQW1yj9zSQw==}
     dependencies:
       '@stackbit/artisanal-names': 1.0.1
-      '@stackbit/cms-core': 3.0.8(graphql@16.9.0)
-      '@stackbit/sdk': 2.0.10
-      '@stackbit/types': 2.0.7
-      '@stackbit/utils': 0.4.27
+      '@stackbit/cms-core': 3.1.5(graphql@16.9.0)
+      '@stackbit/sdk': 2.1.3
+      '@stackbit/types': 2.1.0
+      '@stackbit/utils': 0.7.2
       axios: 1.7.7
       fs-extra: 11.2.0
       git-url-parse: 13.1.1
@@ -5700,16 +5714,16 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@stackbit/cms-sanity@0.2.65(graphql@16.9.0):
-    resolution: {integrity: sha512-6QIm7PqmVa0iAay9k9HIKjIuP9maUXe+a6WS5cPqo/bUPZj7YpkVCP0O5BFVKo5PhiItDgfbVH//3Q9bsR7spw==}
+  /@stackbit/cms-sanity@0.2.72(graphql@16.9.0):
+    resolution: {integrity: sha512-FyWDB4entw7IZVrPcEHrhbXsDMXsqNpztBM0fTBkeNSoBOQLok5X5gecngVvTAzqleNgwICmZLQyit9vzPBHjA==}
     dependencies:
       '@sanity/block-tools': 2.36.2
       '@sanity/client': 3.4.1
       '@sanity/schema': 2.36.2
       '@sanity/types': 3.57.1
-      '@stackbit/cms-core': 3.0.8(graphql@16.9.0)
-      '@stackbit/types': 2.0.7
-      '@stackbit/utils': 0.4.27
+      '@stackbit/cms-core': 3.1.5(graphql@16.9.0)
+      '@stackbit/types': 2.1.0
+      '@stackbit/utils': 0.7.2
       fs-extra: 9.1.0
       glob: 10.2.6
       jsdom: 20.0.3
@@ -5765,18 +5779,18 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@stackbit/dev-common@1.0.8(graphql@16.9.0):
-    resolution: {integrity: sha512-nNpvcbag2KheQD3Q1ruaCUcJi9KFmBnIpR7LmBNW4TS8TGo80ME+Qd+iAdbOixWuCNIYc5yTmckwyxrEtATNYw==}
+  /@stackbit/dev-common@1.0.16(graphql@16.9.0):
+    resolution: {integrity: sha512-uK5LldXgjTaQ9o1kYLwr+qRTel81ol9zZNUmmaj5RPqHec9OM49/kGWipV7oWPRi/GdE9GQl39h43otTopNDkQ==}
     dependencies:
       '@iarna/toml': 2.2.5
       '@stackbit/artisanal-names': 1.0.1
-      '@stackbit/cms-contentful': 1.0.8(graphql@16.9.0)
-      '@stackbit/cms-core': 3.0.8(graphql@16.9.0)
-      '@stackbit/cms-git': 1.0.8(graphql@16.9.0)
-      '@stackbit/cms-sanity': 0.2.65(graphql@16.9.0)
-      '@stackbit/sdk': 2.0.10
-      '@stackbit/types': 2.0.7
-      '@stackbit/utils': 0.4.27
+      '@stackbit/cms-contentful': 1.0.15(graphql@16.9.0)
+      '@stackbit/cms-core': 3.1.5(graphql@16.9.0)
+      '@stackbit/cms-git': 1.0.15(graphql@16.9.0)
+      '@stackbit/cms-sanity': 0.2.72(graphql@16.9.0)
+      '@stackbit/sdk': 2.1.3
+      '@stackbit/types': 2.1.0
+      '@stackbit/utils': 0.7.2
       axios: 1.7.7
       chalk: 4.1.2
       configstore: 5.0.1
@@ -5838,14 +5852,14 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@stackbit/dev@2.1.4(graphql@16.9.0):
-    resolution: {integrity: sha512-T3Te0zP4C+MNOkjvVQzEXBFjzpGiJpA+lHxurQG6om9c6eC3SUkHey3BIr8BOvxGqYfJzERrF1kzImuyVcxUfA==}
+  /@stackbit/dev@2.2.4(graphql@16.9.0):
+    resolution: {integrity: sha512-pOH8CKR7pBEv35sAUE4jO3iVnc19OAn1SiVui+7H4lkzB8wUWvCOIESWOORACbqGDQrhM/gQju/wJ9bfpQpUzA==}
     hasBin: true
     dependencies:
-      '@stackbit/cms-core': 3.0.8(graphql@16.9.0)
-      '@stackbit/cms-git': 1.0.8(graphql@16.9.0)
-      '@stackbit/dev-common': 1.0.8(graphql@16.9.0)
-      '@stackbit/sdk': 2.0.10
+      '@stackbit/cms-core': 3.1.5(graphql@16.9.0)
+      '@stackbit/cms-git': 1.0.15(graphql@16.9.0)
+      '@stackbit/dev-common': 1.0.16(graphql@16.9.0)
+      '@stackbit/sdk': 2.1.3
       axios: 1.7.7
       chalk: 4.1.2
       chokidar: 3.5.3
@@ -5892,12 +5906,12 @@ packages:
       - encoding
     dev: true
 
-  /@stackbit/sdk@2.0.10:
-    resolution: {integrity: sha512-oRpIB7dXh7/pHm7UmZkqZR4jp2ke0YrQB9vY4vINUpDjqUaSN+uiWUeh8yckRm3nVCoLWuTs7l4b4wCkRVLi5g==}
+  /@stackbit/sdk@2.1.3:
+    resolution: {integrity: sha512-glFsAP3ipjEm7sPd1/R+CtskHZTc3CHONB0xLm6q10UXKHZ9lqjOA3bwVuE7/oFbtf2CLofUb1c3uNFq2jAVwQ==}
     dependencies:
       '@octokit/rest': 18.12.0
-      '@stackbit/types': 2.0.7
-      '@stackbit/utils': 0.4.27
+      '@stackbit/types': 2.1.0
+      '@stackbit/utils': 0.7.2
       acorn: 8.10.0
       chokidar: 3.5.3
       esbuild: 0.19.12
@@ -5917,8 +5931,8 @@ packages:
     resolution: {integrity: sha512-DODjYi6Mlc0z+P7oIROtbT+CqWh3+ACHJZrotOCkRhZbT8P3yX/Tmtzdzn6VQIDmLOf58STU/1ceT75R5n71bg==}
     dev: true
 
-  /@stackbit/types@2.0.7:
-    resolution: {integrity: sha512-8DXB2te5t7JbcMhgW6lMhKiOuO6W+1lg/RQhC9Uu38783JSTGwqhBG98g/7PCrkQ4FzCPkzGdHXtQR4AULB/bg==}
+  /@stackbit/types@2.1.0:
+    resolution: {integrity: sha512-eyYEOIkXxepIh3+2mZH5nSMaAzOtXHTRlSvrR5NhCCfJyzNjryUPT02cBW0KN/DO7ibixyGHtoVcnufszUhk4w==}
     dev: true
 
   /@stackbit/utils@0.4.19:
@@ -5932,34 +5946,22 @@ packages:
       strip-ansi: 6.0.1
     dev: true
 
-  /@stackbit/utils@0.4.27:
-    resolution: {integrity: sha512-MDW9Iencio0eWX6CXsM5NdLQxJ576DBceX5mIjU6xuUrluW2rKTA+ioZzyZAst8HzpTCyNhAsi41AdxjzecWeA==}
+  /@stackbit/utils@0.7.2:
+    resolution: {integrity: sha512-VnJRtTA1DLBCRl4994bZIEdoJ8sZlGX33cevxSEXYqIBJhY9K7gbwRS4yS3a1iH5/1i4Bze6u0LWhMbfyl+v4g==}
     dependencies:
       '@iarna/toml': 2.2.5
-      '@stackbit/types': 2.0.7
+      '@notionhq/client': 2.2.15
+      '@stackbit/types': 2.1.0
       axios: 1.7.7
       eventsource: 2.0.2
       fs-extra: 9.1.0
       js-yaml: 4.1.0
       lodash: 4.17.21
+      notion-to-md: 3.1.1
       strip-ansi: 6.0.1
     transitivePeerDependencies:
       - debug
-    dev: true
-
-  /@stackbit/utils@0.4.28:
-    resolution: {integrity: sha512-u1fZOUAHSBaLQkylwtD44Osm/jAGIuxRpouhVGTfUhDyeKN9sHgxDMymDlWYaxT/nnevwI8e+mQatYA7/RRzHA==}
-    dependencies:
-      '@iarna/toml': 2.2.5
-      '@stackbit/types': 2.0.7
-      axios: 1.7.7
-      eventsource: 2.0.2
-      fs-extra: 9.1.0
-      js-yaml: 4.1.0
-      lodash: 4.17.21
-      strip-ansi: 6.0.1
-    transitivePeerDependencies:
-      - debug
+      - encoding
     dev: true
 
   /@svgr/babel-plugin-add-jsx-attribute@6.3.1(@babel/core@7.19.3):
@@ -6427,6 +6429,13 @@ packages:
   /@types/ms@0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: false
+
+  /@types/node-fetch@2.6.11:
+    resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
+    dependencies:
+      '@types/node': 18.7.18
+      form-data: 4.0.0
+    dev: true
 
   /@types/node@18.17.18:
     resolution: {integrity: sha512-/4QOuy3ZpV7Ya1GTRz5CYSz3DgkKpyUptXuQ5PPce7uuyJAOR7r9FhkmxJfvcNUXyklbC63a+YvB3jxy7s9ngw==}
@@ -7559,6 +7568,7 @@ packages:
 
   /b4a@1.6.6:
     resolution: {integrity: sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -7724,6 +7734,7 @@ packages:
 
   /bare-events@2.4.2:
     resolution: {integrity: sha512-qMKFd2qG/36aA4GwvKq8MxnPgCQAmBWmSyLWsJcbn8v03wvIPQ/hG1Ms8bPzndZxMDoHpxez5VOS+gC9Yi24/Q==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -7739,11 +7750,13 @@ packages:
 
   /bare-os@2.4.2:
     resolution: {integrity: sha512-HZoJwzC+rZ9lqEemTMiO0luOePoGYNBgsLLgegKR/cljiJvcDNhDZQkzC+NC5Oh0aHbdBNSOHpghwMuB5tqhjg==}
+    requiresBuild: true
     dev: true
     optional: true
 
   /bare-path@2.1.3:
     resolution: {integrity: sha512-lh/eITfU8hrj9Ru5quUp0Io1kJWIk1bTjzo7JH1P5dWmQ2EL4hFUlfI8FonAhSlgIfhn63p84CDY/x+PisgcXA==}
+    requiresBuild: true
     dependencies:
       bare-os: 2.4.2
     dev: true
@@ -7751,6 +7764,7 @@ packages:
 
   /bare-stream@2.2.1:
     resolution: {integrity: sha512-YTB47kHwBW9zSG8LD77MIBAAQXjU2WjAkMHeeb7hUplVs6+IoM5I7uEVQNPMB7lj9r8I76UMdoMkGnCodHOLqg==}
+    requiresBuild: true
     dependencies:
       b4a: 1.6.6
       streamx: 2.20.0
@@ -10415,6 +10429,7 @@ packages:
 
   /fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -12876,6 +12891,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /markdown-table@2.0.0:
+    resolution: {integrity: sha512-Ezda85ToJUBhM6WGaG6veasyym+Tbs3cMAw/ZhOPqXiYsr0jgocBV3j3nx+4lk47plLlIqjwuTm/ywVI+zjJ/A==}
+    dependencies:
+      repeat-string: 1.6.1
+    dev: true
+
   /markdown-table@3.0.2:
     resolution: {integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==}
     dev: false
@@ -14133,6 +14154,7 @@ packages:
 
   /node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -14163,6 +14185,7 @@ packages:
   /node-gyp-build-optional-packages@5.2.2:
     resolution: {integrity: sha512-s+w+rBWnpTMwSFbaE0UXsRlg7hU4FjekKU4eyAih5T8nJuNZT1nNsskXpxmeqSK9UzkBl6UgRlnKc8hz8IEqOw==}
     hasBin: true
+    requiresBuild: true
     dependencies:
       detect-libc: 2.0.2
     dev: true
@@ -14217,6 +14240,16 @@ packages:
   /normalize-url@6.1.0:
     resolution: {integrity: sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==}
     engines: {node: '>=10'}
+    dev: true
+
+  /notion-to-md@3.1.1:
+    resolution: {integrity: sha512-Zaa2P1B9Rx99bevFYTGuUMYbbfdHn2G1AZMsytYGDWIJjr6Ie1qp/8CorpwVUh1qrquES/V2PkEREqCuTu1zKA==}
+    engines: {node: '>=12'}
+    dependencies:
+      markdown-table: 2.0.0
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
     dev: true
 
   /npm-run-path@4.0.1:
@@ -15448,6 +15481,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -16060,6 +16094,11 @@ packages:
       htmlparser2: 6.1.0
       lodash: 4.17.21
       strip-ansi: 3.0.1
+    dev: true
+
+  /repeat-string@1.6.1:
+    resolution: {integrity: sha512-PV0dzCYDNfRi1jCDbJzpW7jNNDRuCOG/jI5ctQcGKt/clZD+YcPS3yIlWuTJMmESC8aevCFmWJy5wjAFgNqN6w==}
+    engines: {node: '>=0.10'}
     dev: true
 
   /request-progress@3.0.0:
@@ -16839,6 +16878,7 @@ packages:
 
   /streamx@2.20.0:
     resolution: {integrity: sha512-ZGd1LhDeGFucr1CUCTBOS58ZhEendd0ttpGT3usTvosS4ntIwKN9LJFp+OeCSprsCPL14BXVRZlHGRY1V9PVzQ==}
+    requiresBuild: true
     dependencies:
       fast-fifo: 1.3.2
       queue-tick: 1.0.1
@@ -17139,6 +17179,7 @@ packages:
 
   /tar-fs@3.0.6:
     resolution: {integrity: sha512-iokBDQQkUyeXhgPYaZxmczGPhnhXZ0CmrqI+MOb/WFGS9DW5wnfrLgtjUJBvz50vQ3qfRwJ62QVoCFu8mPVu5w==}
+    requiresBuild: true
     dependencies:
       pump: 3.0.0
       tar-stream: 3.1.7
@@ -17160,6 +17201,7 @@ packages:
 
   /tar-stream@3.1.7:
     resolution: {integrity: sha512-qJj60CXt7IU1Ffyc3NJMjh6EkuCFej46zUqJ4J7pqYlThyd9bO0XBTmcOIhSzZJVWfsLks0+nle/j538YAW9RQ==}
+    requiresBuild: true
     dependencies:
       b4a: 1.6.6
       fast-fifo: 1.3.2
@@ -17210,6 +17252,7 @@ packages:
 
   /text-decoder@1.1.1:
     resolution: {integrity: sha512-8zll7REEv4GDD3x4/0pW+ppIxSNs7H1J10IKFZsuOMscumCdM2a+toDGLPA3T+1+fLBql4zbt5z83GEQGGV5VA==}
+    requiresBuild: true
     dependencies:
       b4a: 1.6.6
     dev: true
@@ -18496,7 +18539,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

@@ -28,10 +28,12 @@ const config = defineStackbitConfig({
     actions: [
         Actions.GenerateContentFromPreset({
             label: 'Generate content with AI',
+            siteId: process.env.SITE_ID,
             modelsConfig: [
                 {
                     name: 'changelog',
-                    customPrompt: 'You are writing a changelog post. Include all relevant information about the changes. Do not include internal or placeholder text. All html tags should be removed.',
+                    customPrompt:
+                        'You are writing a changelog post. Include all relevant information about the changes. Do not include internal or placeholder text. All html tags should be removed.',
                 },
             ],
         }),
